@@ -1,1 +1,66 @@
-read me
+ANGULAR:
+
+Walked through ClearFreight codebase (mostly FE)
+
+Components:
+    -created card component to practice refactoring
+    -discussed reasons for components i.e. modularity, reusability
+
+Component Styling, ngClass, ngStyle: 
+    -reviewed ngClass, ngStyle with examples
+
+Core Directives; ngFor, ngIf, etc.
+    -covered these as we went through ClearFreight code base
+
+Pipes: 
+    -looked at date pipe briefly
+    -maybe check out other Pipes
+
+HTTP Client (GET, POST, PUT, DELETE):  
+    -reviewed GET and POST requests briefly (headers, authorization)
+    -created GET request in Postman
+        -went over URL and endpoints
+
+
+
+BOOTSTRAP:
+
+Grid:
+    -discussed proper grid structure (container -> row -> col)
+    -discussed column sizing (12 cols per row, col-2, col-6, etc..)
+
+
+
+VERSION CONTROL:
+
+Created Project from Scratch:
+    -Went over VS Code source control extension
+    -Created new Repo (Fernie) w/ dev branches in order to simulate branching strategy 
+    and practice repo initialization and pulling/pushing changes
+
+
+UTILITIES:
+
+Google Dev-Tools:
+    -Brief Introduction on Elements, Console, Network, and Application Tabs
+
+Eyedropper Chrome Extension:
+    -Looked at this extension while discussing rgb vs hex values for colors
+
+
+SHADOWED:
+    -Shadowed me while I worked on a task for ClearFreight
+    -BE task but good opportunity to see tools involved such as Azure Data Studio, SQL, etc.
+
+
+
+LOOK INTO FURTHER:
+
+Basics of dependency injection, Services:  
+    -review Services
+
+Input, Outputs: 
+    -review inputs, outputs
+
+Events:  
+    -review events
