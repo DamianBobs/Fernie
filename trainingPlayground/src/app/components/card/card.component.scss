@@ -3,9 +3,14 @@
   width: 400px;
 }
 
-// lets go over em units for font sizes
 .header-text {
-  font-size: smaller;
+  font-size: 1em;
+}
+
+.container-number {
+  text-decoration: underline;
+  color:#21E6C1;
+  cursor: pointer;
 }
 
 .circle{
@@ -15,8 +20,17 @@
   width: 30px;
 }
 
+.container-status {
+  font-weight: bold;
+  font-size: medium;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .header{
   background-color: #071E3D;
+  color: white;
+  font-size: small;
 }
 
 .destination {
@@ -66,5 +80,3 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-
-

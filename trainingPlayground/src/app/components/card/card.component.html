@@ -10,30 +10,29 @@
   <!-- Header Row -->
 
   <!-- lets put the style attributes in the header class -->
-  <div class="row header" style="color: white; font-size: small;">
+  <div class="row header">
 
     <div class="col-2">
       <div class="circle my-auto">
-        <img src="assets/icons/anchor.svg" class="centered icon" />
+        <img src="assets/icons/anchor.svg" class="centered icon"/>
       </div>
     </div>
 
     <div class="col-5">
       <!-- use bootstrap margin classes -->
-      <p style="margin-top: 0; margin-bottom: 0;">Status</p>
-      <h3 style="font-weight: bold; font-size: medium; margin-top: 0;  
-      margin-bottom: 0;">{{ demoContainer.Status }}</h3>
+      <p class="my-0">Status</p>
+      <h3 class="container-status">{{ demoContainer.Status }}</h3>
     </div>
 
     <div class="col-5">
       <!-- lets make this a link to something -->
       <!-- lets use variables for colors -->
-      <div style="text-decoration: underline; color:#21E6C1; cursor: pointer;">
+      <div class="container-number">
         {{ demoContainer.containerNumber }}
       </div>
       <div class="header-text">
-        ETD: {{ demoContainer.etd }}<br />
-        ETA: {{ demoContainer.eta }}
+        ETD: {{ demoContainer.etd | date:'mediumDate' }}<br/>
+        ETA: {{ demoContainer.eta | date:'mediumDate' }}
       </div>
     </div>
 
@@ -41,8 +40,8 @@
 
   <!-- Flag Row -->
   <!-- lets consolidate row and destination divs -->
-  <div class="destination">
-  <div class="row">
+
+  <div class="row destination">
     <div class="col-5">
       <img src="assets/flags/philippines.png" class="img-fluid flag" />
       <div>
@@ -61,7 +60,7 @@
       </div>
     </div>
   </div>
-  </div>
+
 
   <hr>
 
