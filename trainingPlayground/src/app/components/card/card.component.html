@@ -8,6 +8,8 @@
 <div class="container">
 
   <!-- Header Row -->
+
+  <!-- lets put the style attributes in the header class -->
   <div class="row header" style="color: white; font-size: small;">
 
     <div class="col-2">
@@ -17,12 +19,15 @@
     </div>
 
     <div class="col-5">
+      <!-- use bootstrap margin classes -->
       <p style="margin-top: 0; margin-bottom: 0;">Status</p>
-      <h3 style="font-weight: bold; font-size: medium; margin-top: 0;
+      <h3 style="font-weight: bold; font-size: medium; margin-top: 0;  
       margin-bottom: 0;">{{ demoContainer.Status }}</h3>
     </div>
 
     <div class="col-5">
+      <!-- lets make this a link to something -->
+      <!-- lets use variables for colors -->
       <div style="text-decoration: underline; color:#21E6C1; cursor: pointer;">
         {{ demoContainer.containerNumber }}
       </div>
@@ -35,6 +40,7 @@
   </div>
 
   <!-- Flag Row -->
+  <!-- lets consolidate row and destination divs -->
   <div class="destination">
   <div class="row">
     <div class="col-5">
@@ -45,6 +51,7 @@
     </div>
     <div class="col-2">
       <br>
+      <!-- lets get the actual svg for this -->
       <p style="font-weight: bold;">>></p>
     </div>
     <div class="col-5">
