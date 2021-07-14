@@ -65,6 +65,9 @@ Input, Outputs:
 Events:  
     -review events
 
+Lifecycle Hooks:
+    -ngOnInit
+
 
 
 TODAY:

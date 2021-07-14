@@ -19,16 +19,16 @@
     <div class="col-5">
       <p style="margin-top: 0; margin-bottom: 0;">Status</p>
       <h3 style="font-weight: bold; font-size: medium; margin-top: 0;
-      margin-bottom: 0;">Current Status</h3>
+      margin-bottom: 0;">{{ demoContainer.Status }}</h3>
     </div>
 
     <div class="col-5">
       <div style="text-decoration: underline; color:#21E6C1; cursor: pointer;">
-        Order Number?
+        {{ demoContainer.containerNumber }}
       </div>
       <div class="header-text">
-        ETD: Jan 24, 2021<br />
-        ETA: Mar 29, 2021
+        ETD: {{ demoContainer.etd }}<br />
+        ETA: {{ demoContainer.eta }}
       </div>
     </div>
 
