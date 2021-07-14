@@ -6,13 +6,13 @@ import { Container } from 'src/app/models/container.model';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() public demoContainer: Container;
+  @Input() public container: Container;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.demoContainer);
-    this.demoContainer = new Container(this.demoContainer);
+    console.log(this.container);
+    this.container = new Container(this.container);
   }
 
 }

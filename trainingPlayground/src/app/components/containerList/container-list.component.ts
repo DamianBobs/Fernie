@@ -10,15 +10,15 @@ import { Container, demoContainer } from 'src/app/models/container.model';
 
 export class ContainerListComponent implements OnInit {
   public containerList: Container[] = [];
-  public demoContainer = new Container(demoContainer);
+  //public demoContainer = new Container(demoContainer);
 
   constructor() { }
 
   ngOnInit(): void {
-    this.containerList.push(this.demoContainer);
-    this.containerList.push(this.demoContainer);
-    this.containerList.push(this.demoContainer);
-    console.log(this.demoContainer);
+    this.containerList.push(demoContainer);
+    this.containerList.push(demoContainer);
+    this.containerList.push(demoContainer);
+    console.log(demoContainer);
     console.log(this.containerList);
   }
 
