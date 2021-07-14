@@ -15,8 +15,8 @@ export class CardComponent implements OnInit {
     this.demoContainer.Id = 'e9c443b8-cc6d-4bd8-a1e8-dcff17499dd8';
     this.demoContainer.containerNumber = 'HMMU6277266'
     this.demoContainer.Status = 'Empty Returned'
-    this.demoContainer.etd = '01242021';
-    this.demoContainer.eta = '03292021';
+    this.demoContainer.etd = '2021-01-24';
+    this.demoContainer.eta = '2021-03-29';
   }
 
 }
