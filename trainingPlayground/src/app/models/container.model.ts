@@ -4,7 +4,7 @@
 export class Container {
     public Id: string;
     public containerNumber: string;
-    public Status: string;
+    public status: string;
     public etd: string;
     public eta: string;
     public origin: string;
@@ -31,9 +31,11 @@ export class ShippingLeg {
  export const demoContainer = new Container();
  demoContainer.Id = 'e9c443b8-cc6d-4bd8-a1e8-dcff17499dd8';
  demoContainer.containerNumber = 'HMMU6277266'
- demoContainer.Status = 'Empty Returned'
+ demoContainer.status = 'Empty Returned'
  demoContainer.etd = '2021-01-24';
  demoContainer.eta = '2021-03-29';
+ demoContainer.origin = 'Manila, Philippines';
+ demoContainer.destination = 'Grand Prairie, United States';
 
  demoContainer.shippingLegs = [
      {
@@ -54,5 +56,5 @@ export class ShippingLeg {
         ata: '2021-03-21',
         location: 'Los Angeles, United States'
     },
- ]
+ ];
  
