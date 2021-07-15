@@ -3,22 +3,32 @@ ANGULAR:
 Walked through ClearFreight codebase (mostly FE)
 
 Components:
-    -created card component to practice refactoring
-    -discussed reasons for components i.e. modularity, reusability
+    -Created card component to practice refactoring
+    -Discussed reasons for components i.e. modularity, reusability
+    -Created container list component in order to embed multiple card components using ngFor
+
 
 Component Styling, ngClass, ngStyle: 
-    -reviewed ngClass, ngStyle with examples
+    -Reviewed ngClass, ngStyle with examples
+    -Discussed putting styling attributes in an existing or new class instead of inline styling
+    -Discussed using Bootstrap margin classes or css class instead of inline styling
+    -Discussed em and rem units for font sizes
+
+Input, Outputs: 
+    -Went over passing data to a child component as an input attribute
 
 Core Directives; ngFor, ngIf, etc.
-    -covered these as we went through ClearFreight code base
+    -Covered these as we went through ClearFreight code base
+    -Used ngFor in container-list component
 
 Pipes: 
-    -looked at date pipe briefly
-    -maybe check out other Pipes
+    -Looked at date pipe briefly
+    -Reformatted eta and etd dates in card component using date pipe
+    -Maybe check out other Pipes
 
 HTTP Client (GET, POST, PUT, DELETE):  
-    -reviewed GET and POST requests briefly (headers, authorization)
-    -created GET request in Postman
+    -Reviewed GET and POST requests briefly (headers, authorization)
+    -Created GET request in Postman
         -went over URL and endpoints
 
 
@@ -26,8 +36,13 @@ HTTP Client (GET, POST, PUT, DELETE):
 BOOTSTRAP:
 
 Grid:
-    -discussed proper grid structure (container -> row -> col)
-    -discussed column sizing (12 cols per row, col-2, col-6, etc..)
+    -Discussed proper grid structure (container -> row -> col)
+    -Discussed column sizing (12 cols per row, col-2, col-6, etc..)
+
+Margin Classes:
+    -mt,mb,ml,mr 0-5
+    -mx, my
+    -mx-auto
 
 
 
@@ -35,14 +50,16 @@ VERSION CONTROL:
 
 Created Project from Scratch:
     -Went over VS Code source control extension
-    -Created new Repo (Fernie) w/ dev branches in order to simulate branching strategy 
-    and practice repo initialization and pulling/pushing changes
+    -Created new Repo (Fernie) w/ dev branches in order to simulate branching strategy and practice repo initialization
+    -Lots of practice pulling/pushing changes
+    -Went over managing merge conflicts
 
 
 UTILITIES:
 
 Google Dev-Tools:
     -Brief Introduction on Elements, Console, Network, and Application Tabs
+    -Used Console and Elements Tabs to debug various issues
 
 Eyedropper Chrome Extension:
     -Looked at this extension while discussing rgb vs hex values for colors
@@ -60,7 +77,7 @@ Basics of dependency injection, Services:
     -review Services
 
 Input, Outputs: 
-    -review inputs, outputs
+    -review output
 
 Events:  
     -review events
@@ -70,6 +87,7 @@ Lifecycle Hooks:
 
 
 
-TODAY:
+TODO:
  - fix route row 
- - 
+ - move mock demo to service 
+ - work in an event 
