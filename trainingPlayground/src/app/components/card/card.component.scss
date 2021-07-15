@@ -1,6 +1,9 @@
 .container{
   height: 600px;
   width: 400px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #071E3D;
 }
 
 .header-text {
@@ -80,3 +83,14 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.view-more {
+  text-align: center;
+  font-weight: bold;
+}
+
+.view-more-content {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
