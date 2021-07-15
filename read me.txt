@@ -1,93 +1,90 @@
+LOOK INTO FURTHER:
+    
+    Outputs: 
+        -review output
+    Lifecycle Hooks:
+        -ngOnInit
+
+
+
 ANGULAR:
 
-Walked through ClearFreight codebase (mostly FE)
+    Walked through ClearFreight codebase (mostly FE)
 
-Components:
-    -Created card component to practice refactoring
-    -Discussed reasons for components i.e. modularity, reusability
-    -Created container list component in order to embed multiple card components using ngFor
+    Components:
+        -Created card component to practice refactoring
+        -Discussed reasons for components i.e. modularity, reusability
+        -Created container list component in order to embed multiple card components using ngFor
 
 
-Component Styling, ngClass, ngStyle: 
-    -Reviewed ngClass, ngStyle with examples
-    -Discussed putting styling attributes in an existing or new class instead of inline styling
-    -Discussed using Bootstrap margin classes or css class instead of inline styling
-    -Discussed em and rem units for font sizes
+    Component Styling, ngClass, ngStyle: 
+        -Reviewed ngClass, ngStyle with examples
+        -Discussed putting styling attributes in an existing or new class instead of inline styling
+        -Discussed using Bootstrap margin classes or css class instead of inline styling
+        -Discussed em and rem units for font sizes
 
-Input, Outputs: 
-    -Went over passing data to a child component as an input attribute
+    Basics of dependency injection, Services:  
+        -Discussed dependency injection 
+        -Created service and moved mock data from component to service 
 
-Core Directives; ngFor, ngIf, etc.
-    -Covered these as we went through ClearFreight code base
-    -Used ngFor in container-list component
+    Input, Outputs: 
+        -Went over passing data to a child component as an input attribute
 
-Pipes: 
-    -Looked at date pipe briefly
-    -Reformatted eta and etd dates in card component using date pipe
-    -Maybe check out other Pipes
+    Core Directives; ngFor, ngIf, etc.
+        -Covered these as we went through ClearFreight code base
+        -Used ngFor in container-list component
 
-HTTP Client (GET, POST, PUT, DELETE):  
-    -Reviewed GET and POST requests briefly (headers, authorization)
-    -Created GET request in Postman
-        -went over URL and endpoints
+    Pipes: 
+        -Looked at date pipe briefly
+        -Reformatted eta and etd dates in card component using date pipe
+        -Maybe check out other Pipes
+
+    Routing:
+        -Created link from container number on card to container detail component 
+
+    Events:  
+        -Went over basic example of click event
+
+    HTTP Client (GET, POST, PUT, DELETE):  
+        -Reviewed GET and POST requests briefly (headers, authorization)
+        -Created GET request in Postman
+            -went over URL and endpoints
 
 
 
 BOOTSTRAP:
 
-Grid:
-    -Discussed proper grid structure (container -> row -> col)
-    -Discussed column sizing (12 cols per row, col-2, col-6, etc..)
+    Grid:
+        -Discussed proper grid structure (container -> row -> col)
+        -Discussed column sizing (12 cols per row, col-2, col-6, etc..)
 
-Margin Classes:
-    -mt,mb,ml,mr 0-5
-    -mx, my
-    -mx-auto
+    Margin Classes:
+        -mt,mb,ml,mr 0-5
+        -mx, my
+        -mx-auto
 
 
 
 VERSION CONTROL:
 
-Created Project from Scratch:
-    -Went over VS Code source control extension
-    -Created new Repo (Fernie) w/ dev branches in order to simulate branching strategy and practice repo initialization
-    -Lots of practice pulling/pushing changes
-    -Went over managing merge conflicts
+    Created Project from Scratch:
+        -Went over VS Code source control extension
+        -Created new Repo (Fernie) w/ dev branches in order to simulate branching strategy and practice repo initialization
+        -Lots of practice pulling/pushing changes
+        -Went over managing merge conflicts
 
 
 UTILITIES:
 
-Google Dev-Tools:
-    -Brief Introduction on Elements, Console, Network, and Application Tabs
-    -Used Console and Elements Tabs to debug various issues
+    Google Dev-Tools:
+        -Brief Introduction on Elements, Console, Network, and Application Tabs
+        -Used Console and Elements Tabs to debug various issues
 
-Eyedropper Chrome Extension:
-    -Looked at this extension while discussing rgb vs hex values for colors
+    Eyedropper Chrome Extension:
+        -Looked at this extension while discussing rgb vs hex values for colors
 
 
 SHADOWED:
+
     -Shadowed me while I worked on a task for ClearFreight
     -BE task but good opportunity to see tools involved such as Azure Data Studio, SQL, etc.
-
-
-
-LOOK INTO FURTHER:
-
-Basics of dependency injection, Services:  
-    -review Services
-
-Input, Outputs: 
-    -review output
-
-Events:  
-    -review events
-
-Lifecycle Hooks:
-    -ngOnInit
-
-
-
-TODO:
- - fix route row 
- - move mock demo to service 
- - work in an event 
