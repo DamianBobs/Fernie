@@ -10,7 +10,6 @@ import { Container, demoContainer } from 'src/app/models/container.model';
 
 export class ContainerListComponent implements OnInit {
   public containerList: Container[] = [];
-  //public demoContainer = new Container(demoContainer);
 
   constructor() { }
 

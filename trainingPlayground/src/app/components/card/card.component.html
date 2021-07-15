@@ -1,29 +1,14 @@
-<!-- // container
-//    row
-//      col -->
-
-
-
-
 <div class="container">
-
-  <!-- Header Row -->
-
-  <!-- lets put the style attributes in the header class -->
   <div class="row header">
-
     <div class="col-2">
       <div class="circle my-auto">
         <img src="assets/icons/anchor.svg" class="centered icon"/>
       </div>
     </div>
-
     <div class="col-5">
-      <!-- use bootstrap margin classes -->
       <p class="my-0">Status</p>
       <h3 class="container-status">{{ container.status }}</h3>
     </div>
-
     <div class="col-5">
       <!-- lets make this a link to something -->
       <!-- lets use variables for colors -->
@@ -35,12 +20,7 @@
         ETA: {{ container.eta | date:'mediumDate' }}
       </div>
     </div>
-
   </div>
-
-  <!-- Flag Row -->
-  <!-- lets consolidate row and destination divs -->
-
   <div class="row destination">
     <div class="col-5">
       <img src="assets/flags/philippines.png" class="img-fluid flag" />
@@ -60,10 +40,30 @@
       </div>
     </div>
   </div>
-
-
   <hr>
-
+  <div class="row">
+    <div class="col-2">
+      <div class="circle my-auto">
+        <img src="assets/icons/delivery-truck.svg" class="centered icon"/>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="col">
+      <p style="font-weight: bold;">Country, City</p>
+      <hr>
+      <!-- lets move status-text class to div w/ row, remove from p tags -->
+      <div class="row statuses">
+        <div class="col">
+        <p class="status-text">Arrived</p>
+        <p class="status-text">Departed</p>
+          </div>
+        <div class="col">
+          <p class="status-text">Date</p>
+          <p class="status-text">date</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-2">
       <div class="circle my-auto">
@@ -86,31 +86,4 @@
       </div>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-2">
-      <div class="circle my-auto">
-        <img src="assets/icons/delivery-truck.svg" class="centered icon"/>
-      </div>
-      <div class="line"></div>
-    </div>
-    <div class="col">
-      <p style="font-weight: bold;">Country, City</p>
-      <hr>
-      <div class="row statuses">
-        <div class="col">
-        <p class="status-text">Arrived</p>
-        <p class="status-text">Departed</p>
-          </div>
-        <div class="col">
-          <p class="status-text">Date</p>
-          <p class="status-text">date</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
 </div>

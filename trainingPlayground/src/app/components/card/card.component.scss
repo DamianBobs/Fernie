@@ -1,4 +1,4 @@
-.container{
+.container {
   height: 600px;
   width: 400px;
 }
@@ -9,13 +9,13 @@
 
 .container-number {
   text-decoration: underline;
-  color:#21E6C1;
+  color: #21e6c1;
   cursor: pointer;
 }
 
-.circle{
+.circle {
   border-radius: 50%;
-  background-color: #1F4287;
+  background-color: #1f4287;
   height: 30px;
   width: 30px;
 }
@@ -27,8 +27,8 @@
   margin-bottom: 0;
 }
 
-.header{
-  background-color: #071E3D;
+.header {
+  background-color: #071e3d;
   color: white;
   font-size: small;
 }
@@ -50,7 +50,7 @@
   border-radius: 50%;
   // outer element must have position relative
   position: relative;
-  background-color: #1F4287;
+  background-color: #1f4287;
 
   .centered {
     // inner element must have position absolute
@@ -68,7 +68,7 @@
 }
 
 .line {
-  background-color: #1F4287;
+  background-color: #1f4287;
   height: 70px;
   width: 4px;
   margin-left: 18px;
