@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-blue: #071e3d;
+    --secondary-blue: #1f4284;
+    --container-blue: #21e6c1;
+    --pink: pink;
+}
+
+$primary-blue: var(--primary-blue);
+$secondary-blue: var(--secondary-blue);
+$container-blue: var(--container-blue);
+$pink: var(--pink);

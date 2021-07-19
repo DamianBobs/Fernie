@@ -9,16 +9,16 @@ export class CardComponent implements OnInit {
   @Input() public container: Container;
   drawerOpen = true;
   darkMode = false;
-  colorA = 'red'
+  colorA = 'red';
 
   constructor() { }
 
   ngOnInit(): void {
     this.container = new Container(this.container);
+    // lets figure out which if to get rid of
     if(!this.container){
       this.container = new Container(demoContainer);
     }
-    console.log(this.container.status);
     if(this.container.Id == null || this.container.Id == '') {
       this.container = new Container(demoContainer);
     }
@@ -28,10 +28,10 @@ export class CardComponent implements OnInit {
     alert('Button was clicked');
   }
 
-  darkModeToggle() {
-    // if(!this.darkMode){
-    //   this.primaryColor = 'blue';
-    // }
+  changeColor(): void{
+    this.darkMode = !this.darkMode;
+    this.colorA =  this.darkMode ? 'red' : 'blue';
   }
+
 
 }

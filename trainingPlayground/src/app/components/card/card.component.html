@@ -10,12 +10,10 @@
       <h3 class="container-status">{{ container.status }}</h3>
     </div>
     <div class="col-5">
-      <!-- lets make this a link to something -->
-      <!-- lets use variables for colors -->
-      <!-- <a routerLink="/container-detail/{{ container.Id }}" class="container-number">
+      <!-- <a routerLink="/container-detail/{{ container.Id }}" [ngClass]="darkMode ? 'container-number': 'container-number-dark'">
         {{ container.containerNumber }}
       </a> -->
-      <a routerLink="/container-detail/{{ container.Id }}" [ngClass]="darkMode ? 'container-number': 'container-number-dark'">
+      <a routerLink="/container-detail/{{ container.Id }}" [ngStyle]="{'color': colorA}">
         {{ container.containerNumber }}
       </a>
       <div class="header-text">
@@ -31,6 +29,7 @@
     <div class="col-3 origin-destination">
       {{ container.origin }}
     </div>
+    <!-- lets get the svg for this -->
     <div class="col-1 destination-arrows">
       <p>>></p>
     </div>
@@ -43,15 +42,18 @@
   </div>
   <hr>
   <div class="drawer flex-grow" [ngStyle]="{'overflow-y': drawerOpen ? 'auto': ''}" [ngClass]="drawerOpen ? 'drawer-closed': 'drawer-open'">
+    <!-- lets pass in shipping legs for data -->
     <app-shipping-details></app-shipping-details>
   </div>
   <div *ngIf="drawerOpen"><hr></div>
   <div class="row" >
     <div class="col-12 view-more-header">
+      <!-- lets make this button dynamic (view more if closed, view less if open) -->
       <button class="view-more-button" (click)="drawerOpen = !drawerOpen">VIEW MORE</button>
     </div>
   </div>
-  <div class="row" style="margin-top: 1;">
+  <!-- lets use actual data for this area -->
+  <div class="row mt-1" >
     <div class="col-4 view-more-details-col">
       <p class="view-more-categories">CONSIGNEE</p>
         <p class="view-more-details">Hand - Veum</p>
@@ -64,9 +66,9 @@
         <p class="view-more-categories">CONTAINER NUMBER</p>
         <p class="view-more-details">Not Found</p>
       </div>
-    </div>
+  </div>
     <div class="drawer flex-grow" [ngStyle]="{'overflow-y': drawerOpen ? 'auto': ''}" [ngClass]="drawerOpen ? 'drawer-open': 'drawer-closed'">
-    <div class="row" style="margin-top: 1;">
+    <div class="row mt-1" >
       <div class="col-4 view-more-details-col">
         <p class="view-more-categories">CONSIGNEE</p>
         <p class="view-more-details">Hand - Veum</p>
@@ -80,7 +82,7 @@
         <p class="view-more-details">Not Found</p>
       </div>
     </div>
-    <div class="row" style="margin-top: 1;">
+    <div class="row mt-1" >
       <div class="col-4 view-more-details-col">
         <p class="view-more-categories">CONSIGNEE</p>
         <p class="view-more-details">Hand - Veum</p>
@@ -125,5 +127,6 @@
       </div>
     </div>
   </div>
-  <button (click)="darkMode = !darkMode">Change text color</button>
+  <!-- <button (click)="darkMode = !darkMode">Change text color</button> -->
+  <button (click)="changeColor()">Change text color</button>
 

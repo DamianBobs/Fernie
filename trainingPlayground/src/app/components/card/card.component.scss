@@ -1,9 +1,11 @@
+@import "src/styles.scss";
+
 .container {
   height: 600px;
   width: 400px;
   border-radius: 5px;
   border-style: solid;
-  border-color: #071E3D;
+  border-color: $primary-blue;
 }
 
 .header-text {
@@ -12,26 +14,19 @@
 
 .container-number {
   text-decoration: underline;
-  color: #21e6c1;
+  color: $container-blue;
   cursor: pointer;
-
 }
 
 .container-number-dark {
   text-decoration: underline;
-  color: pink;
+  color: $pink;
   cursor: pointer;
 }
 
-// .container-number-dark {
-//   text-decoration: underline;
-//   color: 'pink';
-//   cursor: pointer;
-// }
-
 .circle {
   border-radius: 50%;
-  background-color: #1f4287;
+  background-color: $secondary-blue;
   height: 30px;
   width: 30px;
 }
@@ -46,7 +41,7 @@
 .header {
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: #071e3d;
+  background-color: $primary-blue;
   color: white;
   font-size: small;
 }
@@ -69,7 +64,6 @@
 }
 
 .flag {
-  // height: 0%;
   width: 100%;
 }
 
@@ -80,7 +74,7 @@
   border-radius: 50%;
   // outer element must have position relative
   position: relative;
-  background-color: #1f4287;
+  background-color: $secondary-blue;
 
   .centered {
     // inner element must have position absolute
@@ -98,7 +92,6 @@
 }
 
 .drawer {
-  // max-height: 500px;
   max-height: 320px;
   overflow: hidden;
 }
@@ -149,5 +142,3 @@
 .view-more-details-col {
   margin-bottom: 15px;
 }
-
-
