@@ -14,7 +14,20 @@
   text-decoration: underline;
   color: #21e6c1;
   cursor: pointer;
+
 }
+
+.container-number-dark {
+  text-decoration: underline;
+  color: pink;
+  cursor: pointer;
+}
+
+// .container-number-dark {
+//   text-decoration: underline;
+//   color: 'pink';
+//   cursor: pointer;
+// }
 
 .circle {
   border-radius: 50%;
@@ -31,19 +44,33 @@
 }
 
 .header {
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: #071e3d;
   color: white;
   font-size: small;
 }
 
 .destination {
-  padding-top: 5px;
+  padding-top: 15px;
   height: 50px;
+}
+
+.origin-destination {
+  font-size: small;
+  font-weight: bold;
+  text-align: left;
+}
+
+.destination-arrows {
+  padding-top: 7px;
+  font-size: medium;
+  font-weight: bold;
 }
 
 .flag {
   // height: 0%;
-  width: 25%;
+  width: 100%;
 }
 
 // Circle w/ centered icon
@@ -70,27 +97,57 @@
   }
 }
 
-.line {
-  background-color: #1f4287;
-  height: 70px;
-  width: 4px;
-  margin-left: 18px;
+.drawer {
+  // max-height: 500px;
+  max-height: 320px;
+  overflow: hidden;
 }
 
-.status-text {
-  font-size: smaller;
-  color: #787878;
-  margin-top: 0;
-  margin-bottom: 0;
+.drawer-closed {
+  height: 320px;
+  overflow-y: auto;
+  transition: height 0.1s ease-in;
+}
+.drawer-open {
+  height: 0px;
+  overflow-y: scroll;
+  transition: height 0.1s ease-out;
 }
 
-.view-more {
-  text-align: center;
+.flex-grow {
+  flex-grow: 1;
+}
+
+.view-more-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-more-button {
+  background-color: transparent;
+  border-radius: 0px;
+  border-color: transparent;
+}
+
+.view-more-button:focus {
+  outline-color: transparent;
+}
+
+.view-more-categories {
+  font-size: small;
   font-weight: bold;
+  margin-bottom: 0;
 }
 
-.view-more-content {
+.view-more-details {
+  font-size: x-small;
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.view-more-details-col {
+  margin-bottom: 15px;
+}
+
 

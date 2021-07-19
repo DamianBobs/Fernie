@@ -12,9 +12,12 @@
     <div class="col-5">
       <!-- lets make this a link to something -->
       <!-- lets use variables for colors -->
-      <div class="container-number">
+      <!-- <a routerLink="/container-detail/{{ container.Id }}" class="container-number">
         {{ container.containerNumber }}
-      </div>
+      </a> -->
+      <a routerLink="/container-detail/{{ container.Id }}" [ngClass]="darkMode ? 'container-number': 'container-number-dark'">
+        {{ container.containerNumber }}
+      </a>
       <div class="header-text">
         ETD: {{ container.etd | date:'mediumDate' }}<br />
         ETA: {{ container.eta | date:'mediumDate' }}
@@ -22,68 +25,105 @@
     </div>
   </div>
   <div class="row destination">
-    <div class="col-5">
+    <div class="col-2">
       <img src="assets/flags/philippines.png" class="img-fluid flag" />
-      <div>
-        {{ container.origin }}
-      </div>
+    </div>
+    <div class="col-3 origin-destination">
+      {{ container.origin }}
+    </div>
+    <div class="col-1 destination-arrows">
+      <p>>></p>
     </div>
     <div class="col-2">
-      <br>
-      <!-- lets get the actual svg for this -->
-      <p style="font-weight: bold;">>></p>
-    </div>
-    <div class="col-5">
       <img src="assets/flags/united-states.png" class="img-fluid flag" />
-      <div>
-        {{ container.destination }}
-      </div>
+    </div>
+    <div class="col-4 origin-destination">
+      {{ container.destination }}
     </div>
   </div>
   <hr>
-  <div class="row">
-    <div class="col-2">
-      <div class="circle my-auto">
-        <img src="assets/icons/delivery-truck.svg" class="centered icon" />
-      </div>
-      <div class="line"></div>
+  <div class="drawer flex-grow" [ngStyle]="{'overflow-y': drawerOpen ? 'auto': ''}" [ngClass]="drawerOpen ? 'drawer-closed': 'drawer-open'">
+    <app-shipping-details></app-shipping-details>
+  </div>
+  <div *ngIf="drawerOpen"><hr></div>
+  <div class="row" >
+    <div class="col-12 view-more-header">
+      <button class="view-more-button" (click)="drawerOpen = !drawerOpen">VIEW MORE</button>
     </div>
-    <div class="col">
-      <p style="font-weight: bold;">Country, City</p>
-      <hr>
-      <!-- lets move status-text class to div w/ row, remove from p tags -->
-      <div class="row statuses">
-        <div class="col">
-          <p class="status-text">Arrived</p>
-          <p class="status-text">Departed</p>
-        </div>
-        <div class="col">
-          <p class="status-text">Date</p>
-          <p class="status-text">date</p>
-        </div>
+  </div>
+  <div class="row" style="margin-top: 1;">
+    <div class="col-4 view-more-details-col">
+      <p class="view-more-categories">CONSIGNEE</p>
+        <p class="view-more-details">Hand - Veum</p>
+      </div>
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">MASTER AIR WAYBILL</p>
+        <p class="view-more-details">(EWU) - BHNNZ</p>
+      </div>
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">CONTAINER NUMBER</p>
+        <p class="view-more-details">Not Found</p>
+      </div>
+    </div>
+    <div class="drawer flex-grow" [ngStyle]="{'overflow-y': drawerOpen ? 'auto': ''}" [ngClass]="drawerOpen ? 'drawer-open': 'drawer-closed'">
+    <div class="row" style="margin-top: 1;">
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">CONSIGNEE</p>
+        <p class="view-more-details">Hand - Veum</p>
+      </div>
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">MASTER AIR WAYBILL</p>
+        <p class="view-more-details">(EWU) - BHNNZ</p>
+      </div>
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">CONTAINER NUMBER</p>
+        <p class="view-more-details">Not Found</p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 1;">
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">CONSIGNEE</p>
+        <p class="view-more-details">Hand - Veum</p>
+      </div>
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">MASTER AIR WAYBILL</p>
+        <p class="view-more-details">(EWU) - BHNNZ</p>
+      </div>
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">CONTAINER NUMBER</p>
+        <p class="view-more-details">Not Found</p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 6px;">
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">ORDER REFS</p>
+        <p class="view-more-details">VXWRSMFQCXXG</p>
+        <p class="view-more-details">MXFVRETVQYKX</p>
+        <p class="view-more-details">KKLDXKHWOSGJ</p>
+      </div>
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">ETD</p>
+        <p class="view-more-details">ETD NOT FOUND</p>
+      </div>
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">ATD</p>
+        <p class="view-more-details">REF NOT FOUND</p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 6px;">
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">ORIGIN GATE-IN DATE</p>
+        <p class="view-more-details">REF NOT FOUND</p>
+      </div>
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">TOTAL PACKAGES</p>
+        <p class="view-more-details">1</p>
+      </div>
+      <div class="col-4 view-more-details-col">
+        <p class="view-more-categories">SHIPPER</p>
+        <p class="view-more-details">Lebsack, Gutmann and Rice</p>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-2">
-      <div class="circle my-auto">
-        <img src="assets/icons/delivery-truck.svg" class="centered icon" />
-      </div>
-      <div class="line"></div>
-    </div>
-    <div class="col">
-      <p style="font-weight: bold;">Country, City</p>
-      <hr>
-      <div class="row statuses">
-        <div class="col">
-          <p class="status-text">Arrived</p>
-          <p class="status-text">Departed</p>
-        </div>
-        <div class="col">
-          <p class="status-text">Date</p>
-          <p class="status-text">date</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  <button (click)="darkMode = !darkMode">Change text color</button>
+
