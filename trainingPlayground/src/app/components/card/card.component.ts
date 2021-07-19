@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Container } from 'src/app/models/container.model';
+import { Container, demoContainer } from 'src/app/models/container.model';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -7,13 +7,28 @@ import { Container } from 'src/app/models/container.model';
 })
 export class CardComponent implements OnInit {
   @Input() public container: Container;
+  drawerOpen = true;
+  darkMode = false;
+  colorA = 'red'
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.container);
     this.container = new Container(this.container);
     console.log(this.container.status);
+    if(this.container.Id == null || this.container.Id == '') {
+      this.container = new Container(demoContainer);
+    }
+  }
+
+  test() {
+    alert('Button was clicked');
+  }
+
+  darkModeToggle() {
+    // if(!this.darkMode){
+    //   this.primaryColor = 'blue';
+    // }
   }
 
 }

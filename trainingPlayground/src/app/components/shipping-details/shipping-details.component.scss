@@ -1,0 +1,85 @@
+// Circle w/ centered icon
+.circle-departed {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #1f4287;
+  // outer element must have position relative
+  position: relative;
+  background-color: orange;
+
+  .centered {
+    // inner element must have position absolute
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .icon {
+    height: 23px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(287deg) brightness(104%) contrast(104%);
+  }
+}
+
+.circle-arrived {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #1f4287;
+  // outer element must have position relative
+  position: relative;
+  background-color: #1f4287;
+
+  .centered {
+    // inner element must have position absolute
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .icon {
+    height: 23px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(287deg) brightness(104%) contrast(104%);
+  }
+}
+
+.circle-arrived {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-style: solid;
+  // outer element must have position relative
+  position: relative;
+  background-color: grey;
+
+  .centered {
+    // inner element must have position absolute
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .icon {
+    height: 23px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(287deg) brightness(104%) contrast(104%);
+  }
+}
+
+.line {
+  background-color: #1f4287;
+  height: 70px;
+  width: 4px;
+  margin-left: 18px;
+}
+
+.status-text {
+  font-size: smaller;
+  color: #787878;
+  margin-top: 0;
+  margin-bottom: 0;
+}
