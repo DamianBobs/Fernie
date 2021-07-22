@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Container, demoContainer } from 'src/app/models/container.model';
+
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -7,6 +9,7 @@ import { Container, demoContainer } from 'src/app/models/container.model';
 })
 export class CardComponent implements OnInit {
   @Input() public container: Container;
+  public drawerStatus = 'VIEW MORE';
   drawerOpen = true;
   darkMode = false;
   colorA = 'red';
@@ -22,6 +25,9 @@ export class CardComponent implements OnInit {
     if(this.container.Id == null || this.container.Id == '') {
       this.container = new Container(demoContainer);
     }
+    // if(!this.drawerOpen) {
+    //   this.drawerStatus == 'nln'
+    // }
   }
 
   test() {
@@ -29,9 +35,12 @@ export class CardComponent implements OnInit {
   }
 
   changeColor(): void{
-    this.darkMode = !this.darkMode;
-    this.colorA =  this.darkMode ? 'red' : 'blue';
+    // this.darkMode = !this.darkMode;
+    this.colorA =  this.darkMode ? '$primary-blue' : '$secondary-blue';
   }
 
-
+  // openDrawer() {
+  //   this.drawerOpen = !this.drawerOpen;
+  //   this.drawerStatus =  this.drawerOpen ? 'VIEW MORE' : 'VIEW LESS';
+  // }
 }

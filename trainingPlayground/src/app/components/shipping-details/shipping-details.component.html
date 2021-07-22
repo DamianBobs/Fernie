@@ -1,69 +1,23 @@
-<!-- Lets use actual data and ngFor -->
-
-<div class="row">
+<div class="row" *ngFor="let stop of stops">
   <div class="col-2">
-    <div class="circle my-auto">
+    <div class="circle my-auto" [ngClass]="stop.currentLeg ? 'circle-departed' : stop.hasArrived ? 'circle-arrived' : 'circle-expected' ">
       <img src="assets/icons/delivery-truck.svg" class="centered icon" />
     </div>
     <div class="line"></div>
   </div>
   <div class="col">
-    <p style="font-weight: bold;">Country, City</p>
+    <p style="font-weight: bold;">{{stop.leg.location}}</p>
     <hr>
-    <div class="row statuses">
-      <div class="col">
+    <div class="row statuses" *ngIf="stop.leg.ata">
+      <div class="col d-flex justify-content-between">
         <p class="status-text">Arrived</p>
+        <p class="status-text">{{stop.leg.ata}}</p>
+      </div>
+    </div>
+    <div class="row" *ngIf="stop.leg.atd">
+      <div class="col d-flex justify-content-between">
         <p class="status-text">Departed</p>
-      </div>
-      <div class="col">
-        <p class="status-text">Date</p>
-        <p class="status-text">date</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-2">
-    <div class="circle my-auto">
-      <img src="assets/icons/delivery-truck.svg" class="centered icon" />
-    </div>
-    <div class="line"></div>
-  </div>
-  <div class="col">
-    <p style="font-weight: bold;">Country, City</p>
-    <hr>
-    <div class="row statuses">
-      <div class="col">
-        <p class="status-text">Arrived</p>
-        <p class="status-text">Departed</p>
-      </div>
-      <div class="col">
-        <p class="status-text">Date</p>
-        <p class="status-text">date</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-2">
-    <div [ngClass]="hasArrivedTF ? 'circle-arrived': 'circle-expected'">
-      <img src="assets/icons/delivery-truck.svg" class="centered icon" />
-    </div>
-    <div class="line"></div>
-  </div>
-  <div class="col">
-    <p style="font-weight: bold;">Country, City</p>
-    <hr>
-    <div class="row statuses">
-      <div class="col">
-        <p class="status-text">Arrived</p>
-        <p class="status-text">Departed</p>
-      </div>
-      <div class="col">
-        <p class="status-text">Date</p>
-        <p class="status-text">date</p>
+        <p class="status-text">{{stop.leg.atd}}</p>
       </div>
     </div>
   </div>

@@ -8,13 +8,15 @@ import { ContainerListComponent } from './components/containerList/container-lis
 import { ContainerDetailComponent } from './components/container-detail/container-detail.component';
 import { ShippingDetailsComponent } from './components/shipping-details/shipping-details.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     ContainerListComponent,
     ContainerDetailComponent,
-    ShippingDetailsComponent
+    ShippingDetailsComponent,
+
   ],
   imports: [
     BrowserModule,
