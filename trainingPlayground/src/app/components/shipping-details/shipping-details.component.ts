@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ShippingLeg, ShippingStop } from 'src/app/models/container.model';
 
 @Component({
   selector: 'app-shipping-details',
@@ -6,13 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shipping-details.component.scss']
 })
 export class ShippingDetailsComponent implements OnInit {
-  hasDepartedTF = false;
-  hasArrivedTF = false;
-  isExpectedTF = false;
+  @Input() public legs: ShippingLeg[];
+
+  public stops: ShippingStop[] = [];
+  // hasDepartedTF = false;
+  // hasArrivedTF = false;
+  // isExpectedTF = false;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.legs.forEach((leg) => {
+      let stop = new ShippingStop();
+      stop.leg = leg;
+      stop.hasDeparted = leg.atd ? true : false;
+      stop.hasArrived = leg.ata ? true : false;
+      stop.isExpected = (!leg.ata && !leg.atd) ? true : false;
+      stop.currentLeg = (leg.atd && !leg.ata) ? true : false;
+      this.stops.push(stop);
+    });
   }
 
   statusColor() {

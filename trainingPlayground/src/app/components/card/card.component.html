@@ -17,7 +17,7 @@
         {{ container.containerNumber }}
       </a>
       <div class="header-text">
-        ETD: {{ container.etd | date:'mediumDate' }}<br />
+        ETD: {{ container.etd | date:'mediumDate' }}<br/>
         ETA: {{ container.eta | date:'mediumDate' }}
       </div>
     </div>
@@ -43,59 +43,35 @@
   <hr>
   <div class="drawer flex-grow" [ngStyle]="{'overflow-y': drawerOpen ? 'auto': ''}" [ngClass]="drawerOpen ? 'drawer-closed': 'drawer-open'">
     <!-- lets pass in shipping legs for data -->
-    <app-shipping-details></app-shipping-details>
+    <app-shipping-details [legs]="container.shippingLegs"></app-shipping-details>
   </div>
   <div *ngIf="drawerOpen"><hr></div>
   <div class="row" >
     <div class="col-12 view-more-header">
       <!-- lets make this button dynamic (view more if closed, view less if open) -->
-      <button class="view-more-button" (click)="drawerOpen = !drawerOpen">VIEW MORE</button>
+      <!-- <button class="view-more-button" (click)="openDrawer()">{{ this.drawerStatus }}</button> -->
+      <button *ngIf="this.drawerOpen" class="view-more-button" (click)="this.drawerOpen = !this.drawerOpen">VIEW MORE</button>
+      <button *ngIf="!this.drawerOpen" class="view-more-button" (click)="this.drawerOpen = !this.drawerOpen">VIEW LESS</button>
+
     </div>
   </div>
   <!-- lets use actual data for this area -->
   <div class="row mt-1" >
     <div class="col-4 view-more-details-col">
       <p class="view-more-categories">CONSIGNEE</p>
-        <p class="view-more-details">Hand - Veum</p>
+        <p class="view-more-details">{{ container.consignee }}</p>
       </div>
       <div class="col-4 view-more-details-col">
         <p class="view-more-categories">MASTER AIR WAYBILL</p>
-        <p class="view-more-details">(EWU) - BHNNZ</p>
+        <p class="view-more-details">{{ container.masterAirWaybill}}</p>
       </div>
       <div class="col-4 view-more-details-col">
         <p class="view-more-categories">CONTAINER NUMBER</p>
-        <p class="view-more-details">Not Found</p>
+        <p class="view-more-details">{{ container.containerNumber }}</p>
       </div>
   </div>
-    <div class="drawer flex-grow" [ngStyle]="{'overflow-y': drawerOpen ? 'auto': ''}" [ngClass]="drawerOpen ? 'drawer-open': 'drawer-closed'">
-    <div class="row mt-1" >
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">CONSIGNEE</p>
-        <p class="view-more-details">Hand - Veum</p>
-      </div>
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">MASTER AIR WAYBILL</p>
-        <p class="view-more-details">(EWU) - BHNNZ</p>
-      </div>
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">CONTAINER NUMBER</p>
-        <p class="view-more-details">Not Found</p>
-      </div>
-    </div>
-    <div class="row mt-1" >
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">CONSIGNEE</p>
-        <p class="view-more-details">Hand - Veum</p>
-      </div>
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">MASTER AIR WAYBILL</p>
-        <p class="view-more-details">(EWU) - BHNNZ</p>
-      </div>
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">CONTAINER NUMBER</p>
-        <p class="view-more-details">Not Found</p>
-      </div>
-    </div>
+    <div class="drawer flex-grow" [ngStyle]="{'overflow-y': drawerOpen ? 'auto': ''}" [ngClass]="drawerOpen ? 'drawer-open' : 'drawer-closed' ">
+
     <div class="row" style="margin-top: 6px;">
       <div class="col-4 view-more-details-col">
         <p class="view-more-categories">ORDER REFS</p>
