@@ -4,7 +4,6 @@ import { CardComponent } from './components/card/card.component';
 import { ContainerDetailComponent } from './components/container-detail/container-detail.component';
 import { ContainerListComponent } from './components/containerList/container-list.component';
 import { ShippingDetailsComponent } from './components/shipping-details/shipping-details.component';
-import { Router } from '@angular/router';
 
 
 const routes: Routes = [
@@ -18,7 +17,6 @@ const routes: Routes = [
   },
   {
     path: 'container-detail/:containerId',
-    // path: 'container-detail',
     component: ContainerDetailComponent
   }
 ];

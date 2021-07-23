@@ -1,3 +1,13 @@
+.shipment-details {
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: transparent;
+  box-shadow: 5px 10px 18px #888888;
+  padding-left: 30px;
+  padding: 30px;
+}
+
 .flight-box{
   border: 1px solid;
   border-radius: 5px;
@@ -5,20 +15,50 @@
   box-shadow: 5px 10px 18px #888888;
 }
 
-.delivery {
-  background-color: blue;
-  height: 100px;
-  width: 100px;
+.delivery-container {
+  background-color: #EEEEEE;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: transparent;
+  box-shadow: 5px 10px 18px #888888;
 }
 
 .flag {
-  height: 40px;
+  height: auto;
   width: 40px;
 }
 
-.text {
-  margin-top: 0px;
-  margin-bottom: 0px;
+#text-row {
+  p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: small;
+    &:first-of-type {
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+  }
+
+}
+
+.shipment-milestones {
   font-size: small;
+  text-align: center;
+  font-weight: bold;
+}
+
+.milestone-boxes {
+  padding-left: 15px;
+}
+
+.box {
+  background-color: #0077E7;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: transparent;
+  margin-right: 12px;
+  margin-left: 12px;
+  margin-bottom: 8px;
+
 }
 
