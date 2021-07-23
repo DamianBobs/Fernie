@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col d-flex justify-content-between">
       <p>Air Shipment Details: VAENATPG </p>
@@ -11,7 +11,7 @@
       <p>Wednesday, June 30, 2021</p>
     </div>
   </div>
-  <div class="contaier details">
+  <div class="container-details">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,14 +45,20 @@
         <div class="col-8">
           <div class="flight-box">
             <div class="row">
-              <div class="col d-flex justify-content-between">
+              <div class="col-6" align="left">
                 <p>DEPARTURE</p>
+              </div>
+              <div class="col-6" align="right">
                 <p>ARRIVAL</p>
               </div>
+              <!-- <div class="col d-flex justify-content-between">
+                <p>DEPARTURE</p>
+                <p>ARRIVAL</p>
+              </div> -->
             </div>
             <div class="row">
               <div class="col-1">
-                <img src="assets/flags/united-states.png" class="img-fluid flag" />
+                <img src="assets/flags/united-states.png" class="flag img-fluid" />
               </div>
               <div class="col-3">
                 <p>DEPARTURE</p>
@@ -64,38 +70,42 @@
                 <p style="text-align: center;">FLIGHT DURATION</p>
               </div>
               <div class="col-3">
-                <p>DEPARTURE</p>
+                <p>ARRIVAL</p>
                 <p>CITY</p>
               </div>
-              <div class="col-1">
-                <img src="assets/flags/philippines.png" class="img-fluid flag" />
+              <div class="col-1 d-none d-md-block">
+                <img src="assets/flags/philippines.png" class="flag img-fluid" />
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row" id="text-row">
             <div class="col-6 mt-1">
-              <p class="text" style="font-weight: bold;">SHIPPER</p>
-              <p class="text">Predovic - Hegmann</p>
-              <p class="text">28659 Doyle Crest</p>
-              <p class="text">Lake Kirsten, Ohio 38840 Guadeloupe</p>
+              <p>SHIPPER</p>
+              <p>Predovic - Hegmann</p>
+              <p>28659 Doyle Crest</p>
+              <p>Lake Kirsten, Ohio 38840 Guadeloupe</p>
             </div>
             <div class="col-6 mt-1">
-              <p class="text" style="font-weight: bold;">CONSIGNEE</p>
-              <p class="text">Predovic - Hegmann</p>
-              <p class="text">28659 Doyle Crest</p>
-              <p class="text">Lake Kirsten, Ohio 38840 Guadeloupe</p>
+              <p>CONSIGNEE</p>
+              <p>Predovic - Hegmann</p>
+              <p>28659 Doyle Crest</p>
+              <p>Lake Kirsten, Ohio 38840 Guadeloupe</p>
             </div>
             <div class="col-6 mt-1">
-              <p class="text" style="font-weight: bold;">PICK UP</p>
-              <p class="text">Predovic - Hegmann</p>
-              <p class="text">28659 Doyle Crest</p>
-              <p class="text">Lake Kirsten, Ohio 38840 Guadeloupe</p>
+              <p>PICK UP</p>
+              <p>Predovic - Hegmann</p>
+              <p>28659 Doyle Crest</p>
+              <p>Lake Kirsten, Ohio 38840 Guadeloupe</p>
             </div>
             <div class="col-6 mt-1">
-              <p class="text" style="font-weight: bold;">DELIVERY</p>
-              <p class="text">Predovic - Hegmann</p>
-              <p class="text">28659 Doyle Crest</p>
-              <p class="text">Lake Kirsten, Ohio 38840 Guadeloupe</p>
+              <p>DELIVERY</p>
+              <p>Predovic - Hegmann</p>
+              <p>28659 Doyle Crest</p>
+              <p>Lake Kirsten, Ohio 38840 Guadeloupe</p>
+            </div>
+            <div class="col-6 mt-1">
+              <p>PICK UP DETAILS</p>
+              <p>Predovic - Hegmann</p>
             </div>
             <div class="col-12">
               <hr align="center">
@@ -104,8 +114,88 @@
 
         </div>
         <div class="col-4">
-          <div class="delivery">
+          <div class="delivery-container">
+            <div class="row" id="text-row">
+              <div class="col-6" align="right">
+                <p>Customs</p>
+                <p>icon</p>
+                <p>status</p>
+              </div>
+              <div class="col-6" align="left">
+                <p>Delivery</p>
+                <p>icon</p>
+                <p>status</p>
+              </div>
+            </div>
+            <p class="shipment-milestones">SHIPMENT MILESTONES</p>
+            <div class="row milestone-boxes">
+              <div class="col-5 box">
+                <p>Picked up</p>
+                <p>Actual:</p>
+                <p>Date</p>
+              </div>
+              <div class="col-5 box">
+                <p>Picked up</p>
+                <p>Actual:</p>
+                <p>Date</p>
+              </div>
+            </div>
+            <div class="row milestone-boxes">
+              <div class="col-5 box">
+                <p>Picked up</p>
+                <p>Actual:</p>
+                <p>Date</p>
+              </div>
+              <div class="col-5 box">
+                <p>Picked up</p>
+                <p>Actual:</p>
+                <p>Date</p>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+      <div class="row" id="text-row">
+        <div class="col-4 mt-1">
+          <p>MASTER AIR WAYBILL</p>
+          <p>(JQQ) - AFQNO</p>
+        </div>
+        <div class="col-4 mt-1">
+          <p>INCO TERMS</p>
+          <p>Cost And Freight</p>
+        </div>
+        <div class="col-4 mt-1">
+          <p>DESCRIPTION</p>
+          <p>SKIM MILK POWDER - MEDIUM HEAT CODE
+          </p>
+        </div>
+      </div>
+      <div class="row" id="text-row">
+        <div class="col-4 mt-1">
+          <p>SHIPPER</p>
+          <p>Predovic - Hegmann</p>
+        </div>
+        <div class="col-4 mt-1">
+          <p>CONSIGNEE</p>
+          <p>Predovic - Hegmann</p>
+        </div>
+        <div class="col-4 mt-1">
+          <p>PICK UP</p>
+          <p>Predovic - Hegmann</p>
+        </div>
+      </div>
+      <div class="row" id="text-row">
+        <div class="col-4 mt-1">
+          <p>SHIPPER</p>
+          <p>Predovic - Hegmann</p>
+        </div>
+        <div class="col-4 mt-1">
+          <p>CONSIGNEE</p>
+          <p>Predovic - Hegmann</p>
+        </div>
+        <div class="col-4 mt-1">
+          <p>PICK UP</p>
+          <p>Predovic - Hegmann</p>
         </div>
       </div>
     </div>
