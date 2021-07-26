@@ -14,6 +14,8 @@
         <p class="status-text">{{stop.leg.ata}}</p>
       </div>
     </div>
+    <!-- TODO lets look at null checks -->
+    <!-- TODO lets apply status-text class to the parent row only, handle in scss like yesterday -->
     <div class="row" *ngIf="stop.leg.atd">
       <div class="col d-flex justify-content-between">
         <p class="status-text">Departed</p>

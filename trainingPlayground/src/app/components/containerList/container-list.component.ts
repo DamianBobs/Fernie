@@ -10,6 +10,7 @@ import { ContainerDetailComponent } from '../container-detail/container-detail.c
 })
 
 export class ContainerListComponent implements OnInit {
+  //TODO: page was throwing an error because containerList was declared, but not instantiated, when we tried to push demo containers onto it
   public containerList: Container[] = [];
 
   constructor(

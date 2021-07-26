@@ -29,7 +29,7 @@
     <div class="col-3 origin-destination">
       {{ container.origin }}
     </div>
-    <!-- lets get the svg for this -->
+    <!-- TODO lets get the svg for this -->
     <div class="col-1 destination-arrows">
       <p>>></p>
     </div>
@@ -42,20 +42,16 @@
   </div>
   <hr>
   <div class="drawer flex-grow" [ngStyle]="{'overflow-y': drawerOpen ? 'auto': ''}" [ngClass]="drawerOpen ? 'drawer-closed': 'drawer-open'">
-    <!-- lets pass in shipping legs for data -->
     <app-shipping-details [legs]="container.shippingLegs"></app-shipping-details>
   </div>
   <div *ngIf="drawerOpen"><hr></div>
   <div class="row" >
     <div class="col-12 view-more-header">
-      <!-- lets make this button dynamic (view more if closed, view less if open) -->
-      <!-- <button class="view-more-button" (click)="openDrawer()">{{ this.drawerStatus }}</button> -->
       <button *ngIf="this.drawerOpen" class="view-more-button" (click)="this.drawerOpen = !this.drawerOpen">VIEW MORE</button>
       <button *ngIf="!this.drawerOpen" class="view-more-button" (click)="this.drawerOpen = !this.drawerOpen">VIEW LESS</button>
-
     </div>
   </div>
-  <!-- lets use actual data for this area -->
+  
   <div class="row mt-1" >
     <div class="col-4 view-more-details-col">
       <p class="view-more-categories">CONSIGNEE</p>
@@ -70,9 +66,9 @@
         <p class="view-more-details">{{ container.containerNumber }}</p>
       </div>
   </div>
-    <!-- lets consolidate these ngStyle and ngClass attribrutes -->
+    <!-- TODO lets consolidate these ngStyle and ngClass attribrutes -->
     <div class="drawer flex-grow" [ngStyle]="{'overflow-y': drawerOpen ? 'auto': ''}" [ngClass]="drawerOpen ? 'drawer-open' : 'drawer-closed' ">
-
+    <!-- TODO lets use actual data for this area -->
     <div class="row" style="margin-top: 6px;">
       <div class="col-4 view-more-details-col">
         <p class="view-more-categories">ORDER REFS</p>

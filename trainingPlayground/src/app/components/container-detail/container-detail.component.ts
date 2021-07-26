@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerDetailComponent implements OnInit {
 
+  // TODO: Lets get this component setup to accept input for data
+
   constructor() { }
 
   ngOnInit(): void {

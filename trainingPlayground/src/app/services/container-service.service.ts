@@ -6,7 +6,7 @@ import { Container, demoContainer } from 'src/app/models/container.model';
   providedIn: 'root'
 })
 export class ContainerServiceService {
-  public containerList: Container[];
+  public containerList: Container[] = [];
 
   constructor() {
     this.containerList.push(demoContainer);
