@@ -1,0 +1,28 @@
+.document-header {
+  background-color: #0077E7;
+  color: white;
+  min-height: 30px !important;
+  height: 30px !important;
+}
+
+#document-header-text {
+  p {
+    font-size: small;
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+.content {
+  background-color: #0077E7;
+  color: white;
+  font-size: small;
+  min-height: 40px !important;
+  height: 40px !important;
+}
+
+.document-details {
+  background-color: white;
+  margin-left: 1px;
+  margin-right: 1px;
+}

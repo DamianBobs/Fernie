@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 .shipment-details {
   background-color: #FFFFFF;
   border: 1px solid;
@@ -67,4 +69,77 @@
   border-color: transparent;
   box-shadow: 5px 10px 18px #888888;
 }
+
+.container-shipping-legs {
+  margin-top: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: transparent;
+  box-shadow: 5px 10px 18px #888888;
+  padding-left: 30px;
+  padding: 30px;
+}
+
+.container-shipping-legs-details {
+  background-color: #EEEEEE;
+  padding: 20px;
+  border-radius: 5px;
+  border-color: transparent;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+// Circle w/ centered icon
+.circle {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  // outer element must have position relative
+  position: relative;
+  background-color: $secondary-blue;
+  margin-left: 73px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+
+  .centered {
+    // inner element must have position absolute
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+}
+.icon {
+  height: 40px;
+  width: 40px;
+  margin-left: 70px;
+}
+
+.horizontal-line {
+  margin-left: 0px;
+  margin-top: 35px;
+  height: 5px;
+  width: 160px;
+  background-color: $secondary-blue;
+}
+
+#shipping-legs-text {
+  p {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 60px;
+    font-size: small;
+    &:first-of-type {
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: medium;
+    }
+  }
+}
+
+
 
