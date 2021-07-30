@@ -1,4 +1,5 @@
 <div class="container">
+
   <div class="row header">
     <div class="col-2">
       <div class="circle my-auto">
@@ -22,6 +23,7 @@
       </div>
     </div>
   </div>
+
   <div class="row destination">
     <div class="col-2">
       <img src="assets/flags/philippines.png" class="img-fluid flag" />
@@ -40,11 +42,15 @@
       {{ container.destination }}
     </div>
   </div>
+
   <hr>
+
   <div class="drawer flex-grow" [ngStyle]="{'overflow-y': drawerOpen ? 'auto': ''}" [ngClass]="drawerOpen ? 'drawer-closed': 'drawer-open'">
     <app-shipping-details [legs]="container.shippingLegs"></app-shipping-details>
   </div>
+
   <div *ngIf="drawerOpen"><hr></div>
+
   <div class="row" >
     <div class="col-12 view-more-header">
       <button *ngIf="this.drawerOpen" class="view-more-button" (click)="this.drawerOpen = !this.drawerOpen">VIEW MORE</button>
@@ -55,54 +61,62 @@
   <div class="row mt-1" >
     <div class="col-4 view-more-details-col">
       <p class="view-more-categories">CONSIGNEE</p>
-        <p class="view-more-details">{{ container.consignee }}</p>
-      </div>
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">MASTER AIR WAYBILL</p>
-        <p class="view-more-details">{{ container.masterAirWaybill}}</p>
-      </div>
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">CONTAINER NUMBER</p>
-        <p class="view-more-details">{{ container.containerNumber }}</p>
-      </div>
+      <p class="view-more-details">{{ container.consignee }}</p>
+    </div>
+    <div class="col-4 view-more-details-col">
+      <p class="view-more-categories">MASTER AIR WAYBILL</p>
+      <p class="view-more-details">{{ container.masterAirWaybill}}</p>
+    </div>
+    <div class="col-4 view-more-details-col">
+      <p class="view-more-categories">CONTAINER NUMBER</p>
+      <p class="view-more-details">{{ container.containerNumber }}</p>
+    </div>
   </div>
     <!-- TODO lets consolidate these ngStyle and ngClass attribrutes -->
-    <div class="drawer flex-grow" [ngStyle]="{'overflow-y': drawerOpen ? 'auto': ''}" [ngClass]="drawerOpen ? 'drawer-open' : 'drawer-closed' ">
+  <div class="drawer flex-grow" [ngStyle]="{'overflow-y': drawerOpen ? 'auto': ''}" [ngClass]="drawerOpen ? 'drawer-open' : 'drawer-closed' ">
     <!-- TODO lets use actual data for this area -->
-    <div class="row" style="margin-top: 6px;">
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">ORDER REFS</p>
-        <p class="view-more-details">VXWRSMFQCXXG</p>
-        <p class="view-more-details">MXFVRETVQYKX</p>
-        <p class="view-more-details">KKLDXKHWOSGJ</p>
+      <div class="row" style="margin-top: 6px;">
+        <div class="col-4 view-more-details-col">
+          <p class="view-more-categories">ORDER REFS</p>
+          <p class="view-more-details">VXWRSMFQCXXG</p>
+          <p class="view-more-details">MXFVRETVQYKX</p>
+          <p class="view-more-details">KKLDXKHWOSGJ</p>
+        </div>
+        <div class="col-4 view-more-details-col">
+          <p class="view-more-categories">ETD</p>
+          <p class="view-more-details">ETD NOT FOUND</p>
+        </div>
+        <div class="col-4 view-more-details-col">
+          <p class="view-more-categories">ATD</p>
+          <p class="view-more-details">REF NOT FOUND</p>
+        </div>
       </div>
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">ETD</p>
-        <p class="view-more-details">ETD NOT FOUND</p>
+      <div class="row" style="margin-top: 6px;">
+        <div class="col-4 view-more-details-col">
+          <p class="view-more-categories">ORIGIN GATE-IN DATE</p>
+          <p class="view-more-details">REF NOT FOUND</p>
+        </div>
+        <div class="col-4 view-more-details-col">
+          <p class="view-more-categories">TOTAL PACKAGES</p>
+          <p class="view-more-details">1</p>
+        </div>
+        <div class="col-4 view-more-details-col">
+          <p class="view-more-categories">SHIPPER</p>
+          <p class="view-more-details">Lebsack, Gutmann and Rice</p>
+        </div>
       </div>
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">ATD</p>
-        <p class="view-more-details">REF NOT FOUND</p>
-      </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <button (click)="changeColor()">Change text color</button>
     </div>
-    <div class="row" style="margin-top: 6px;">
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">ORIGIN GATE-IN DATE</p>
-        <p class="view-more-details">REF NOT FOUND</p>
-      </div>
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">TOTAL PACKAGES</p>
-        <p class="view-more-details">1</p>
-      </div>
-      <div class="col-4 view-more-details-col">
-        <p class="view-more-categories">SHIPPER</p>
-        <p class="view-more-details">Lebsack, Gutmann and Rice</p>
-      </div>
+    <div class="col-6">
+      <!-- <button (click)="testController(5)">Testing controller</button> -->
     </div>
   </div>
-  <!-- <button (click)="darkMode = !darkMode">Change text color</button> -->
-  <button (click)="changeColor()">Change text color</button>
+</div>
 
+<!-- <button (click)="darkMode = !darkMode">Change text color</button> -->
   <!-- <mat-form-field appearance="fill">
     <mat-label>Choose a date</mat-label>
     <input matInput [matDatepicker]="picker">

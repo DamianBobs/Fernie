@@ -1,7 +1,7 @@
 <!-- TODO: This page needs to be refined a little bit -->
-<div class="container">
-  <div class="row">
-    <div class="col" *ngFor="let container of containerList">
+<div class="container-fluid">
+  <div class="row my-3 align-items-center justify-content-center">
+    <div class="col-auto my-5" *ngFor="let container of containerList">
       <app-card [container]="container"></app-card>
     </div>
   </div>

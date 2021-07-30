@@ -14,9 +14,17 @@ export class ContainerListComponent implements OnInit {
   public containerList: Container[] = [];
 
   constructor(
-    containerServiceService: ContainerServiceService
+    public containerServiceService: ContainerServiceService
   ) {
-    this.containerList = containerServiceService.getContainers();
+      this.containerServiceService.getContainers().subscribe(
+        (res) => {
+          this.containerList = res;
+          console.log(this.containerList);
+        }
+      )
+        
+      
+   
   }
 
   ngOnInit(): void {
