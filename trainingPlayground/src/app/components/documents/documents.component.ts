@@ -12,4 +12,7 @@ export class DocumentsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  documentsCounter() { 
+    
+  }
 }

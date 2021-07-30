@@ -25,7 +25,13 @@
   background-color: white;
   margin-left: 1px;
   margin-right: 1px;
-  &:first-of-type { 
-    
+  // &:first-of-type {
+  //   background-color: #EEEEEE;
+  // }
+}
+
+#document-details {
+  .row:nth-child(even) {
+    background-color: #EEEEEE;
   }
 }

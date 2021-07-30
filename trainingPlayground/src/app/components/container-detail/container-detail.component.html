@@ -11,13 +11,13 @@
       <p>Wednesday, June 30, 2021</p>
     </div>
   </div>
-  <div class="container-details">
+  <div class="container-tabs">
     <mat-tab-group>
-      <mat-tab label="SHIPMENT DETAILS">
-        <ng-template matTabContent>
-          <app-ship-details-tab></app-ship-details-tab>
-        </ng-template>
-      </mat-tab>
+        <mat-tab label="SHIPPING DETAILS">
+          <ng-template matTabContent>
+            <app-ship-details-tab></app-ship-details-tab>
+          </ng-template>
+        </mat-tab>
       <mat-tab label="DECLARATION DETAILS">
         <ng-template matTabContent>
           <app-declaration-details></app-declaration-details>
@@ -32,15 +32,31 @@
   </div>
   <div class="container-shipping-legs">
     <div class="row">
-      <div class="col-3">
+      <div class="col-lg-3">
         <p>map</p>
       </div>
-      <div class="col-9">
+      <div class="col-lg-9 ">
         <p>SHIPPING LEGS</p>
         <hr class="tittle-hr">
         <div class="container-shipping-legs-details">
           <div class="row">
-            <div class="col-2">
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <img src="assets/icons/anchor.svg" class=" icon" />
+              <div class="row" style="justify-content: center;">
+                <div class="col-6">
+                  <div class="circle"></div>
+                </div>
+                <div class="col-6">
+                  <div class="horizontal-line"></div>
+                </div>
+              </div>
+              <div id="shipping-legs-text">
+                <p>SEATTLE, UNITED STATES</p>
+                <p>Departed
+                  June, 26 - 03:47 AM</p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
               <img src="assets/icons/anchor.svg" class=" icon" />
               <div class="row">
                 <div class="col-6">
@@ -56,7 +72,7 @@
                   June, 26 - 03:47 AM</p>
               </div>
             </div>
-            <div class="col-2">
+            <div class="col-lg-2 col-md-4 col-sm-6">
               <img src="assets/icons/anchor.svg" class=" icon" />
               <div class="row">
                 <div class="col-6">
@@ -72,7 +88,7 @@
                   June, 26 - 03:47 AM</p>
               </div>
             </div>
-            <div class="col-2">
+            <div class="col-lg-2 col-md-4 col-sm-6">
               <img src="assets/icons/anchor.svg" class=" icon" />
               <div class="row">
                 <div class="col-6">
@@ -88,7 +104,7 @@
                   June, 26 - 03:47 AM</p>
               </div>
             </div>
-            <div class="col-2">
+            <div class="col-lg-2 col-md-4 col-sm-6">
               <img src="assets/icons/anchor.svg" class=" icon" />
               <div class="row">
                 <div class="col-6">
@@ -104,7 +120,7 @@
                   June, 26 - 03:47 AM</p>
               </div>
             </div>
-            <div class="col-2">
+            <div class="col-lg-2 col-md-4 col-sm-6">
               <img src="assets/icons/anchor.svg" class=" icon" />
               <div class="row">
                 <div class="col-6">
@@ -116,6 +132,7 @@
                 <p>Departed
                   June, 26 - 03:47 AM</p>
               </div>
+
             </div>
           </div>
         </div>
