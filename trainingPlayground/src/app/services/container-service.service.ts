@@ -28,7 +28,7 @@ export class ContainerServiceService {
   public getContainers(): Observable<Container[]> {
     let requestURL = `${environment.apiBaseURL}/container/containerList`;
 
-    https://localhost:5001/api/container/containerList
+    // https://localhost:5001/api/container/containerList
 
     return this.httpClient.get<Container[]>(requestURL);
   }
