@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 .shipment-details {
   background-color: #FFFFFF;
   border: 1px solid;
@@ -7,6 +9,40 @@
   padding-left: 30px;
   padding: 30px;
 }
+
+mat-tab-group {
+  width: 100%;
+}
+::ng-deep .mat-tab-header {
+  padding-top: 10px;
+  border-bottom: none;
+  background-color: #EEEEEE;
+  ::ng-deep .mat-ripple-element {
+    display: none;
+  }
+}
+::ng-deep .mat-tab-label {
+  margin: 0px 5px 0px 5px;
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.8;
+  border-bottom: 6px solid #EEEEEE;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+::ng-deep .mat-tab-label-active {
+  opacity: 1;
+  color: $primary-blue;
+  background-color: white;
+  border-bottom: 6px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+
+
 
 .flight-box{
   border: 1px solid;
@@ -67,4 +103,78 @@
   border-color: transparent;
   box-shadow: 5px 10px 18px #888888;
 }
+
+.container-shipping-legs {
+  margin-top: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: transparent;
+  box-shadow: 5px 10px 18px #888888;
+  padding-left: 30px;
+  padding: 30px;
+}
+
+.container-shipping-legs-details {
+  background-color: #EEEEEE;
+  padding: 20px;
+  border-radius: 5px;
+  border-color: transparent;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+// Circle w/ centered icon
+.circle {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  // outer element must have position relative
+  position: relative;
+  background-color: $secondary-blue;
+  // margin-left: 73px;
+  // margin-top: 20px;
+  // margin-bottom: 10px;
+  // margin-right: 0px;
+  justify-content: center;
+
+  .centered {
+    // inner element must have position absolute
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+}
+.icon {
+  height: 40px;
+  width: 40px;
+  margin-left: 70px;
+}
+
+.horizontal-line {
+  margin-left: 0px;
+  margin-top: 35px;
+  height: 5px;
+  width: 160px;
+  background-color: $secondary-blue;
+}
+
+#shipping-legs-text {
+  p {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 60px;
+    font-size: small;
+    &:first-of-type {
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: medium;
+    }
+  }
+}
+
+
 
